@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#78d6e6",
+                        "surface-container-highest": "#e5e2e1",
+                        "inverse-surface": "#313030",
+                        "tertiary": "#5f5e5e",
+                        "secondary-container": "#dddddd",
+                        "on-primary-fixed": "#001f24",
+                        "on-secondary-fixed-variant": "#454747",
+                        "outline-variant": "#bdc9cb",
+                        "surface-tint": "#006875",
+                        "surface-container": "#f0eded",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "secondary": "#5d5f5f",
+                        "outline": "#6e797b",
+                        "surface-variant": "#e5e2e1",
+                        "primary-fixed-dim": "#76d4e4",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "secondary-fixed": "#e2e2e2",
+                        "error": "#ba1a1a",
+                        "background": "#fcf9f8",
+                        "on-tertiary-container": "#545453",
+                        "surface": "#fcf9f8",
+                        "on-primary-fixed-variant": "#004f58",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#cac8c7",
+                        "inverse-on-surface": "#f3f0ef",
+                        "error-container": "#ffdad6",
+                        "primary": "#006875",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "on-background": "#1c1b1b",
+                        "surface-bright": "#fcf9f8",
+                        "surface-dim": "#dcd9d9",
+                        "on-primary-container": "#005d68",
+                        "tertiary-fixed": "#e5e2e1",
+                        "primary-fixed": "#9af0ff",
+                        "on-secondary-container": "#606161",
+                        "surface-container-high": "#eae7e7",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "inverse-primary": "#76d4e4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-surface": "#1c1b1b",
+                        "on-surface-variant": "#3e494b",
+                        "on-secondary-fixed": "#1a1c1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "sm": "12px",
+                        "base": "8px",
+                        "md": "24px",
+                        "margin": "32px",
+                        "xl": "80px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "lg": "48px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Work Sans"],
+                        "headline-sm": ["Space Grotesk"],
+                        "body-lg": ["Work Sans"],
+                        "headline-md": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "label-md": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "label-lg": ["Work Sans"],
+                        "display": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-md": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        .transition-ease-custom {
+            transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-800/50 font-['Space_Grotesk'] antialiased">
+<div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">HorizonX Labs</div>
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="text-cyan-500 dark:text-cyan-400 border-b-2 border-cyan-400 pb-1 font-medium hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200 ease-[cubic-bezier(0.25,1,0.5,1)]" href="#">Home</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200 ease-[cubic-bezier(0.25,1,0.5,1)]" href="#">Services</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200 ease-[cubic-bezier(0.25,1,0.5,1)]" href="#">About</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200 ease-[cubic-bezier(0.25,1,0.5,1)]" href="#">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-base py-sm rounded-lg font-label-lg hover:brightness-95 transition-all duration-300">Get Started</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-background py-xl lg:py-40">
+<div class="max-w-7xl mx-auto px-8 relative z-10 grid lg:grid-cols-2 gap-xl items-center">
+<div class="space-y-md">
+<div class="inline-flex items-center gap-base px-sm py-xs bg-secondary-container rounded-full text-on-secondary-container">
+<span class="font-label-md uppercase">Future-Ready Architecture</span>
+</div>
+<h1 class="font-display text-display text-on-background leading-none">
+                        Engineering the next <span class="text-primary">Horizon</span> of Digital Innovation.
+                    </h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl">
+                        HorizonX Labs delivers precision-engineered software solutions and architectural consulting for forward-thinking enterprises. We bridge the gap between complex technical challenges and elegant user experiences.
+                    </p>
+<div class="flex flex-wrap gap-md pt-base">
+<button class="bg-primary-container text-on-primary-container px-lg py-md rounded-lg font-headline-sm transition-ease-custom hover:brightness-95">
+                            Inquire Now
+                        </button>
+<button class="border border-outline text-on-surface px-lg py-md rounded-lg font-headline-sm transition-ease-custom hover:bg-on-surface/5">
+                            View Case Studies
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-xl overflow-hidden border border-outline-variant bg-surface-container-low">
+<img alt="Innovation Lab" class="w-full h-full object-cover grayscale-[20%] opacity-90 transition-all duration-700 hover:grayscale-0" data-alt="A futuristic, high-tech abstract visualization of a digital network and glowing data nodes. The aesthetic is clean and minimalist, featuring a soft blue and cyan color palette with deep grey accents. The lighting is diffused and atmospheric, reflecting a professional and innovative corporate laboratory environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA644uihH8lI1ZoHHJxP5dJtYY3PIJRRwpYbawf-MRmj7Trs0o8lL7LAzcFWV-lv82HpTbdwvUMYHB7zZ2-PQSHJrWT102TB4GQcarF0fRQZ1mtzxnEDgMnGmodAW_3HlOV58Rw9AtNykvcMCsWUs2YNJbhqeU_b0PowriorCM8f8ypNvYl8nRAvG4UZeDTnXDe6M7-F9CIiqrtbsqTcK6xRdTQpTTgI92DK9j5cuL-YnSm4QWREd15-DTxB7R0X9o9T-sDn6EWxQmG"/>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-base -left-base w-24 h-24 bg-primary-container/20 -z-10 blur-xl"></div>
+</div>
+</div>
+</section>
+<!-- Brief Intro Section -->
+<section class="py-xl bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row gap-lg items-baseline">
+<div class="md:w-1/3">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">The HorizonX <br/>Methodology</h2>
+</div>
+<div class="md:w-2/3">
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                            We don't just build software; we architect sustainable digital ecosystems. Our approach combines the rigorous precision of aerospace engineering with the agility of modern design thinking. At HorizonX Labs, technical excellence is the baseline, and strategic innovation is the goal.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Strengths / Bento Grid -->
+<section class="py-xl bg-background">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-lg">
+<span class="text-primary font-label-lg uppercase tracking-widest">Our Capabilities</span>
+<h2 class="font-headline-lg text-headline-lg mt-base">Precision meets performance.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Strength 1 -->
+<div class="p-md bg-white border border-outline-variant rounded-lg flex flex-col gap-md transition-ease-custom hover:border-primary">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary-container/10 text-primary">
+<span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm">Cloud Architecture</h3>
+<p class="font-body-md text-body-md text-secondary">Robust, scalable infrastructure designed for 99.99% uptime and global latency optimization.</p>
+</div>
+<!-- Strength 2 -->
+<div class="p-md bg-white border border-outline-variant rounded-lg flex flex-col gap-md transition-ease-custom hover:border-primary">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary-container/10 text-primary">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm">Full-Stack R&amp;D</h3>
+<p class="font-body-md text-body-md text-secondary">Rapid prototyping and development of complex enterprise applications using modern toolchains.</p>
+</div>
+<!-- Strength 3 -->
+<div class="p-md bg-white border border-outline-variant rounded-lg flex flex-col gap-md transition-ease-custom hover:border-primary">
+<div class="w-12 h-12 flex items-center justify-center rounded-lg bg-primary-container/10 text-primary">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm">AI Integration</h3>
+<p class="font-body-md text-body-md text-secondary">Leveraging large language models and predictive analytics to automate high-value workflows.</p>
+</div>
+<!-- Large Featured Card -->
+<div class="md:col-span-2 relative p-md bg-inverse-surface text-inverse-on-surface rounded-lg overflow-hidden flex flex-col justify-end min-h-[320px]">
+<img alt="Collaboration" class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay" data-alt="A wide-angle shot of a minimalist, modern collaborative workspace with clean lines, white desks, and ergonomic furniture. Large floor-to-ceiling windows reveal a soft, early morning city horizon. The scene is bathed in natural, bright daylight, reflecting a high-trust, high-focus professional environment with subtle cyan accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-XY2JJHO6znn_MoHl69fExGGPWKetVxPqPbTQbKVKKy5rs7b5Ppb0i6tq3LuhfWIGzAUyVtg7_FQUh2klDoHOZ1an0dr03k2pmRtvJCcL3lW3VH2jvKRwOkcdC89Av0kMGpveaHH-1okoZ16U0ndYm6xABsh9vfQda4ZLZpn6LrEkRF_vh0jFK4Ek0sacbtD8hPuQbQYXo0pF0hBWsMaGCart7T8PF46frxrbnr-wc2dHXhmhnaCCDufiDCbeVHUtPfm12RDOb95_"/>
+<div class="relative z-10 max-w-lg">
+<h3 class="font-headline-md text-headline-md mb-base text-white">Strategic Consulting</h3>
+<p class="font-body-md text-zinc-300">Our senior architects work alongside your C-suite to define technological roadmaps that align with long-term business objectives.</p>
+</div>
+</div>
+<!-- Small Stat Card -->
+<div class="p-md bg-primary-container text-on-primary-container rounded-lg flex flex-col justify-center items-center text-center">
+<span class="font-display text-display">50+</span>
+<span class="font-label-lg uppercase">Enterprise Launches</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-xl bg-surface-container">
+<div class="max-w-7xl mx-auto px-8 text-center space-y-md">
+<h2 class="font-headline-lg text-headline-lg max-w-3xl mx-auto">Ready to navigate the next digital frontier?</h2>
+<p class="font-body-lg text-secondary max-w-xl mx-auto">Join a cohort of market leaders who trust HorizonX Labs for their most critical technical transformations.</p>
+<div class="pt-base">
+<button class="bg-on-background text-background px-lg py-md rounded-lg font-headline-sm hover:brightness-125 transition-all">
+                        Schedule a Consultation
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t bg-zinc-50 dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800">
+<div class="max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex flex-col items-center md:items-start gap-sm">
+<div class="text-lg font-bold text-zinc-900 dark:text-zinc-50 font-['Space_Grotesk']">HorizonX Labs</div>
+<p class="text-zinc-500 dark:text-zinc-400 font-['Space_Grotesk'] text-sm">© 2024 HorizonX Labs. All rights reserved.</p>
+</div>
+<div class="flex gap-lg">
+<a class="text-zinc-500 dark:text-zinc-400 font-['Space_Grotesk'] text-sm hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors" href="#">Privacy Policy</a>
+<a class="text-zinc-500 dark:text-zinc-400 font-['Space_Grotesk'] text-sm hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors" href="#">Terms of Service</a>
+<a class="text-zinc-500 dark:text-zinc-400 font-['Space_Grotesk'] text-sm hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors" href="#">Cookie Policy</a>
+</div>
+<div class="flex gap-base">
+<a class="text-zinc-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>

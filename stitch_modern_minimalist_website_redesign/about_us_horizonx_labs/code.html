@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-container": "#78d6e6",
+                      "surface-container-highest": "#e5e2e1",
+                      "inverse-surface": "#313030",
+                      "tertiary": "#5f5e5e",
+                      "secondary-container": "#dddddd",
+                      "on-primary-fixed": "#001f24",
+                      "on-secondary-fixed-variant": "#454747",
+                      "outline-variant": "#bdc9cb",
+                      "surface-tint": "#006875",
+                      "surface-container": "#f0eded",
+                      "on-tertiary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "secondary": "#5d5f5f",
+                      "outline": "#6e797b",
+                      "surface-variant": "#e5e2e1",
+                      "primary-fixed-dim": "#76d4e4",
+                      "on-tertiary-fixed-variant": "#474746",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "secondary-fixed": "#e2e2e2",
+                      "error": "#ba1a1a",
+                      "background": "#fcf9f8",
+                      "on-tertiary-container": "#545453",
+                      "surface": "#fcf9f8",
+                      "on-primary-fixed-variant": "#004f58",
+                      "on-error": "#ffffff",
+                      "tertiary-container": "#cac8c7",
+                      "inverse-on-surface": "#f3f0ef",
+                      "error-container": "#ffdad6",
+                      "primary": "#006875",
+                      "secondary-fixed-dim": "#c6c6c6",
+                      "on-background": "#1c1b1b",
+                      "surface-bright": "#fcf9f8",
+                      "surface-dim": "#dcd9d9",
+                      "on-primary-container": "#005d68",
+                      "tertiary-fixed": "#e5e2e1",
+                      "primary-fixed": "#9af0ff",
+                      "on-secondary-container": "#606161",
+                      "surface-container-high": "#eae7e7",
+                      "on-primary": "#ffffff",
+                      "surface-container-low": "#f6f3f2",
+                      "inverse-primary": "#76d4e4",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "on-surface": "#1c1b1b",
+                      "on-surface-variant": "#3e494b",
+                      "on-secondary-fixed": "#1a1c1c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "sm": "12px",
+                      "base": "8px",
+                      "md": "24px",
+                      "margin": "32px",
+                      "xl": "80px",
+                      "gutter": "24px",
+                      "xs": "4px",
+                      "lg": "48px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "body-sm": ["Work Sans"],
+                      "headline-sm": ["Space Grotesk"],
+                      "body-lg": ["Work Sans"],
+                      "headline-md": ["Space Grotesk"],
+                      "headline-lg": ["Space Grotesk"],
+                      "label-md": ["Work Sans"],
+                      "body-md": ["Work Sans"],
+                      "label-lg": ["Work Sans"],
+                      "display": ["Space Grotesk"]
+              },
+              "fontSize": {
+                      "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "label-md": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "display": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glass {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-800/50 font-['Space_Grotesk'] antialiased">
+<div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
+<a class="text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50" href="#">HorizonX Labs</a>
+<nav class="hidden md:flex items-center gap-base">
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200 px-4" href="#">Home</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200 px-4" href="#">Services</a>
+<a class="text-cyan-500 dark:text-cyan-400 border-b-2 border-cyan-400 pb-1 font-medium px-4" href="#">About</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-200 px-4" href="#">Contact</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg text-label-lg font-semibold hover:brightness-95 transition-all">Get Started</button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-8 py-xl flex flex-col md:flex-row items-center gap-lg">
+<div class="flex-1 space-y-md">
+<span class="text-primary font-label-lg tracking-widest uppercase">Our Identity</span>
+<h1 class="font-display text-display text-on-surface leading-tight">Engineering the next frontier.</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl">HorizonX Labs is a technical innovation studio dedicated to bridging the gap between ambitious ideas and scalable digital reality through meticulous craft and strategic precision.</p>
+</div>
+<div class="flex-1 w-full aspect-[4/5] bg-surface-container overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover" data-alt="A wide, high-angle shot of a minimalist, modern laboratory and research space with floor-to-ceiling windows. The room is bathed in soft, natural daylight and features clean architectural lines, polished concrete floors, and sparse professional furniture. The overall aesthetic is cold yet inviting, emphasizing technical precision and corporate modernism in a bright light-mode setting with subtle cyan blue accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlS1xdLyB-k00j7qsJFO50QxESbrQmSocSuc1o0EJcYNAY1K_fSHRDPry47aWk7iVIxnL7Te1eBMrYq3qC6yPXfeDTSduchGK0b6Jsg3CM84UI3kKev5AVsXU-QM7k6nMcqAAN0vE05zowrhUpTgwzCRg_qgIRVMYcYDn07O5Yu_VXTEcFehMCTpyeXVNx4OlrjmcOViQRNdhldc-TiLvIeLvO2sdxguxzn05cwsDtiMQtMTFKuifNdrskvs2F6veGQDUMLBKJAzBw"/>
+</div>
+</section>
+<!-- Mission Statement -->
+<section class="bg-surface-container-low py-xl">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<div class="md:col-span-4">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Mission &amp; Purpose</h2>
+</div>
+<div class="md:col-span-8 space-y-md">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            We believe that technology should be an invisible enabler of human potential. Our mission is to dismantle complex technical barriers for industry leaders, providing them with the architecture required to innovate without friction.
+                        </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md pt-base">
+<div class="p-md bg-white border border-outline-variant/30 rounded-lg">
+<span class="material-symbols-outlined text-primary mb-sm" style="font-size: 32px;">precision_manufacturing</span>
+<h3 class="font-headline-sm text-headline-sm mb-sm">Technical Rigor</h3>
+<p class="font-body-sm text-body-sm text-secondary">Every line of code is an asset. We build with the long-term integrity of your infrastructure as our primary benchmark.</p>
+</div>
+<div class="p-md bg-white border border-outline-variant/30 rounded-lg">
+<span class="material-symbols-outlined text-primary mb-sm" style="font-size: 32px;">lightbulb_circle</span>
+<h3 class="font-headline-sm text-headline-sm mb-sm">Deep Innovation</h3>
+<p class="font-body-sm text-body-sm text-secondary">We don't just solve problems; we redefine constraints. Our labs are a breeding ground for sustainable disruption.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Story / Timeline -->
+<section class="py-xl max-w-7xl mx-auto px-8">
+<div class="mb-lg">
+<h2 class="font-headline-lg text-headline-lg">Our Evolution</h2>
+<div class="h-1 w-24 bg-primary-container mt-sm"></div>
+</div>
+<div class="relative border-l-2 border-surface-container-highest ml-4 md:ml-0 md:pl-0">
+<!-- 2024 -->
+<div class="mb-xl relative pl-10 md:pl-20">
+<div class="absolute left-[-9px] top-0 w-4 h-4 bg-primary border-4 border-white rounded-full"></div>
+<span class="font-headline-sm text-headline-sm text-primary">2024</span>
+<h3 class="font-headline-sm text-headline-sm mt-xs">The Global Expansion</h3>
+<p class="font-body-md text-body-md text-secondary mt-sm max-w-2xl">Establishing nodes in London and Singapore to serve our international partners with localized technical expertise and 24/7 innovation support.</p>
+</div>
+<!-- 2022 -->
+<div class="mb-xl relative pl-10 md:pl-20">
+<div class="absolute left-[-9px] top-0 w-4 h-4 bg-surface-container-highest border-4 border-white rounded-full"></div>
+<span class="font-headline-sm text-headline-sm text-tertiary">2022</span>
+<h3 class="font-headline-sm text-headline-sm mt-xs">Enterprise Lab Launch</h3>
+<p class="font-body-md text-body-md text-secondary mt-sm max-w-2xl">Pivoted to serve Fortune 500 clients, developing high-throughput systems for finance and logistical giants.</p>
+</div>
+<!-- 2020 -->
+<div class="relative pl-10 md:pl-20">
+<div class="absolute left-[-9px] top-0 w-4 h-4 bg-surface-container-highest border-4 border-white rounded-full"></div>
+<span class="font-headline-sm text-headline-sm text-tertiary">2020</span>
+<h3 class="font-headline-sm text-headline-sm mt-xs">Foundation</h3>
+<p class="font-body-md text-body-md text-secondary mt-sm max-w-2xl">HorizonX Labs was founded in a small studio in Zurich with a singular focus on decentralized systems and performance engineering.</p>
+</div>
+</div>
+</section>
+<!-- Team Bento Grid -->
+<section class="bg-surface py-xl border-y border-outline-variant/10">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-lg space-y-sm">
+<h2 class="font-headline-lg text-headline-lg">The Architects</h2>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto">A collective of engineers, designers, and strategists driven by the pursuit of technical excellence.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Leader 1 -->
+<div class="md:col-span-2 group relative h-[500px] bg-zinc-100 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A professional portrait of a senior tech executive with a confident expression. He is wearing a dark, minimalist suit against a soft-focus office background with cold daylight. The lighting is sophisticated and directional, emphasizing the high-trust, corporate modernist style of the firm. Subtle cyan accents are present in the background elements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwGuVNA5JNUJIWBzkgD29APNh3D5MrZiWvF2yBo7tx2BIVj7JBThVlr0Bbpxq4TwRKrNGfMTjM6RIFGqrx8fxJf3Jqu_Pw8ZhaB1esLop-x1_A597FV5tPC3q7lvjYWzHHeeTMrG4XRoYjRMQubWtWnAMLZkmXBOMwLvyUY84GKiocVJ4sERdfDIgBoOOKyW3zG6Cccwtz1ZYAp5OfMd4I07x6s_yg-vnjywdlpQF-Ls6R-bZZ_nYplfYhBrQb1YcyifMtQs6Fy0fw"/>
+<div class="absolute bottom-0 left-0 w-full p-md bg-gradient-to-t from-black/80 to-transparent text-white">
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary-container">Founder &amp; CTO</span>
+<h4 class="font-headline-md text-headline-md">Marcus Thorne</h4>
+</div>
+</div>
+<!-- Leader 2 -->
+<div class="group relative h-[500px] bg-zinc-100 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A professional headshot of a female design lead in a brightly lit, modern studio. She has a thoughtful expression and is dressed in a minimalist, high-end white shirt. The background is a clean white gallery space with a soft blue hue, reflecting the corporate precision and airy aesthetic of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVN-IlCk0YMWKa6sov1zFLxA6RMqvNW4pC4WQnXiHOoHEFakR1t2caJAPYhddzfFo6m2JKrzXcixSc-gIK1VijsWGv_iJkTFIaUHDXPAA0LGHpekXCvldnhd3UhiUs_9DVZX44mY0m0aUk6BD3R00JfCrFLpIp_yU_xjCirHWrzzEXTlQ_eGNUbmguVEUHImeqk8LAVFeCnW1OIJEovQq0MAoaCevLYaASr3zy5mhfjTz4SSmNw5RBCII-UE9CljI_L2Ws4kf5H25w"/>
+<div class="absolute bottom-0 left-0 w-full p-md bg-gradient-to-t from-black/80 to-transparent text-white">
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary-container">Head of Design</span>
+<h4 class="font-headline-md text-headline-md">Elena Voss</h4>
+</div>
+</div>
+<!-- Small Members -->
+<div class="p-md border border-outline-variant/30 rounded-lg flex flex-col justify-center text-center">
+<h4 class="font-headline-sm text-headline-sm mb-xs">Join the Lab</h4>
+<p class="font-body-sm text-body-sm text-secondary mb-md">We are always looking for exceptional talent to join our remote-first engineering teams.</p>
+<a class="inline-flex items-center justify-center gap-xs text-primary font-label-lg hover:underline" href="#">
+                            View Careers <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="group relative aspect-square bg-zinc-100 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a software engineer in a high-tech office environment. Soft, cool lighting illuminates the scene, focusing on the individual's expertise and professional calm. The setting is clean and minimalist, using a palette of whites and light greys with technical blue accents to maintain a high-trust aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8Gl7lA4epl4Y5cuiHrtNCaQq23iCcdqBL-W04evjkp1NRloOkeBO43RVTppCXKtmsUBSAoMcrUBcgngIPc5wKfq6Z1ccBNbPbfOaZo6bq_gIz7VUlEuKFnQ38zQwZ8a1yb7aJYcMbxxmpEAT7j0Aflplvg9091p5ojWUQZvjwbKLPFXloldLhSOXcvhaZQfbrpa0aUBagqMZPOU26yWvdCjIPFulSSbNrpE-oKNcFuHjqYutpNnoe02bRWXeXEn13xQ89yaw6BNAF"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-md">
+<div class="text-white"><p class="font-label-lg">Julian Chen</p><p class="text-xs">Staff Engineer</p></div>
+</div>
+</div>
+<div class="group relative aspect-square bg-zinc-100 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a senior strategist in a minimalist boardroom setting. The lighting is bright and even, highlighting the clean, modern architectural elements of the office. The color scheme is dominated by neutral tones and soft cyan blue, communicating reliability and corporate sophistication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPoZSaSFOZgvycyZxBrWMUELMjvJOHlkHMqpmBrfdKqrTzp0NkCX_PecW47icReL-HoRemjGnmTpWc5a7Z4QjMjRUL10chItA3QXRSbRRCOT8xoprR_Z04ef34l1tLv9UvXFXc_UP8PL2wnZM-Q-_9HGPHSWykw-Zbb38-UP-Na2ixpRT9NnR83CyDfDHDedNfPoMciUqODyCrCSR_-Q-x8MTE1b_LW3mPRSxTX9eg749pv-PPoKP-7OPmQzWGEsSHFqkYXC15rMEN"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-md">
+<div class="text-white"><p class="font-label-lg">Sarah Jenkins</p><p class="text-xs">Growth Lead</p></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Values Section -->
+<section class="py-xl max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+<div class="space-y-md">
+<h2 class="font-headline-lg text-headline-lg">Our Core Values</h2>
+<ul class="space-y-lg">
+<li class="flex gap-md">
+<span class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-secondary-container rounded-lg text-on-secondary-container">01</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm">Radical Transparency</h4>
+<p class="font-body-md text-body-md text-secondary mt-xs">We provide clients with direct access to our workflows, codebases, and decision-making processes. No black boxes.</p>
+</div>
+</li>
+<li class="flex gap-md">
+<span class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-secondary-container rounded-lg text-on-secondary-container">02</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm">Precision Engineering</h4>
+<p class="font-body-md text-body-md text-secondary mt-xs">Near-perfect is not an option. We prioritize rigorous testing and clean architecture over rapid, brittle iteration.</p>
+</div>
+</li>
+<li class="flex gap-md">
+<span class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-secondary-container rounded-lg text-on-secondary-container">03</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm">Human-Centric Focus</h4>
+<p class="font-body-md text-body-md text-secondary mt-xs">Behind every pixel and script is a human experience. We build for people, not just for machines.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="relative">
+<div class="w-full aspect-square bg-surface-container rounded-lg relative z-10 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A collaborative team meeting in a high-end, minimalist workspace. Three professionals are engaged in deep discussion around a large, white oak table. The room is spacious with a clear sky visible through large glass walls, creating an atmosphere of calm and innovation. The style is clean, corporate, and modern with soft primary blue accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjOuNU77u1oDDFm1zDOZ8a56Tnm3fNxqJkaC1zqrMkZxx9ULkgRn8iEXvVm873j17GROtoiisVjHGtXwNwfBlJ_-gQtJXnTwhk9BseYm4onwF76YX6VJtaQweUvBwbwik5e5A2TUFCVzLyqJwtiEA8LwCLxQRit2_C-EiCwN8V1QXS3NLiG0599iaV6Rwicge7c4nOTCrSbRdBb5kOQ-B0L6MdmsidmIF1IMMz6xWvb9LicvSCdOAIb7_NoX_pn2rf_cK1iOx0aiUa"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-48 h-48 bg-primary-container/20 rounded-lg -z-0"></div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-7xl mx-auto px-8 pb-xl">
+<div class="bg-inverse-surface text-inverse-on-surface p-xl rounded-xl flex flex-col md:flex-row justify-between items-center gap-lg">
+<div class="space-y-sm">
+<h2 class="font-headline-lg text-headline-lg">Ready to build the future?</h2>
+<p class="font-body-lg text-body-lg opacity-80 max-w-md">Let's discuss how HorizonX Labs can architect your next technical breakthrough.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-md">
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-semibold hover:brightness-95 transition-all">Schedule a Briefing</button>
+<button class="border border-outline px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all">Download Portfolio</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 font-['Space_Grotesk'] text-sm">
+<div class="max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="space-y-base text-center md:text-left">
+<span class="text-lg font-bold text-zinc-900 dark:text-zinc-50">HorizonX Labs</span>
+<p class="text-zinc-500 dark:text-zinc-400">© 2024 HorizonX Labs. All rights reserved.</p>
+</div>
+<div class="flex gap-lg">
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors" href="#">Privacy Policy</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors" href="#">Terms of Service</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors" href="#">Cookie Policy</a>
+</div>
+<div class="flex gap-md">
+<a class="text-zinc-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-zinc-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-zinc-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">language</span></a>
+</div>
+</div>
+</footer>
+</body></html>
